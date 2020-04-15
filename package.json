@@ -1,0 +1,11 @@
+{
+  "name": "hapi-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/vision": "^6.0.0",
+    "pug": "^2.0.4"
+  }
+}
