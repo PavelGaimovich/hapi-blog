@@ -11,6 +11,7 @@ const init = async () => {
     });
 
     await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/inert'));
 
     server.views({
         engines: {
@@ -21,6 +22,15 @@ const init = async () => {
     });
 
     server.route(routes);
+    server.route({
+      method: 'GET',
+      path: '/vendor/{file*}',
+      handler: {
+        directory: {
+          path: 'public/vendor'
+        }
+      }
+    })
 
     await server.start();
     console.log('Server running on %s', server.info.uri);

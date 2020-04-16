@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h1 Sign in
+  .row
+    form.col.s12
+      .row
+        .input-field.col.s12
+          input#email.validate(type='email')
+          label(for='email') Email
+      .row
+        .input-field.col.s12
+          input#password.validate(type='password')
+          label(for='password') Password
