@@ -1,7 +1,7 @@
 'use strict';
 
 const Hapi = require('@hapi/hapi');
-const routes = require('./config/routes');
+const routes = require('./routes');
 
 const init = async () => {
 
@@ -30,7 +30,7 @@ const init = async () => {
           path: 'public/vendor'
         }
       }
-    })
+    });
 
     await server.start();
     console.log('Server running on %s', server.info.uri);

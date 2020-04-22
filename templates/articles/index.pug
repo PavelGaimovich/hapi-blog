@@ -2,3 +2,13 @@ extends ../layout
 
 block content
   h1 Articles
+  .row
+    each article in articles
+      .col.s12.m7
+        h2.header Horizontal Card
+        .card.horizontal
+          .card-stacked
+            .card-content
+              !{article.body}
+            .card-action
+              a(href='#') This is a link
