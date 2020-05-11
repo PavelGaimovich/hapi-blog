@@ -12,6 +12,7 @@ const init = async () => {
 
     await server.register(require('@hapi/vision'));
     await server.register(require('@hapi/inert'));
+    await server.register(require('@hapi/cookie'));
 
     server.views({
         engines: {

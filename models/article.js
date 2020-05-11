@@ -15,6 +15,6 @@ Article.init({
 }, {
   sequelize: db,
   modelName: 'article'
-}).sync();
+});
 
 module.exports = Article;

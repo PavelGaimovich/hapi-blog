@@ -3,15 +3,24 @@ extends ../layout
 block content
   h1 Sign up
   .row
-    form.col.s12
+    form.col.s12(method='POST' action='/register')
+      if feedback
+        .row
+          .col
+            .card-panel.teal.lighten-2=feedback
       .row
         .input-field.col.s6
-          input#first_name.validate(placeholder='Placeholder' type='text')
+          input.validate(name= 'first_name' placeholder='Name' type='text')
           label(for='first_name') First Name
         .input-field.col.s6
-          input#last_name.validate(type='text')
+          input.validate(name= 'last_name' placeholder='Surname' type='text')
           label(for='last_name') Last Name
       .row
         .input-field.col.s12
-          input#email.validate(type='email')
+          input.validate(name= 'email'  placeholder='Email' type='email')
           label(for='email') Email
+      .row
+        .input-field.col.s12
+          input.validate(name= 'password' placeholder='Password' type='password')
+          label(for='password') Password
+      button.waves-effect.waves-light.btn Submit

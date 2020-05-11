@@ -1,3 +1,5 @@
+const userHandler = require('../handlers/users');
+
 module.exports = [
   {
     method: 'GET',
@@ -5,6 +7,11 @@ module.exports = [
     handler: (request, h) => {
         return h.view('users/sign_in');
     }
+  },
+  {
+    method: 'POST',
+    path: '/sign_in',
+    handler: userHandler.postSignIn
   },
   {
     method: 'POST',
@@ -19,5 +26,10 @@ module.exports = [
     handler: (request, h) => {
         return h.view('users/sign_up');
     }
+  },
+  {
+    method: 'POST',
+    path: '/register',
+    handler: userHandler.postSignUp
   }
 ];

@@ -4,6 +4,10 @@ block content
   h1 Sign in
   .row
     form.col.s12
+      if feedback
+        .row
+          .col
+            .card-panel.teal.lighten-2=feedback
       .row
         .input-field.col.s12
           input#email.validate(type='email')
